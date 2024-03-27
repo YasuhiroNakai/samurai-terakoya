@@ -1,0 +1,47 @@
+ /* タイピングゲーム全体 */
+ body {
+  font-size: 3em; 
+  text-align: center;
+}
+
+/* ゲームの残り秒数が表示されるタイマーの領域 */
+.count {
+  margin: 0;
+  font-weight: bold;
+  color: #888;
+}
+
+/* 正答数 */
+.score {
+  margin: 0;
+  font-weight: bold;
+  color: #888;
+}
+
+/* ミスの数 */
+.miss {
+  margin: 0;
+  font-weight: bold;
+  color: #888;
+}
+
+/* テキストが表示される領域 */
+.wrap {
+  margin-top: 20px;
+  padding: 80px 40px;
+  background-color: #666;
+  background-color: blue;
+  font-weight: bold;
+  color: #fff;
+  font-family: "MS 明朝";
+}
+
+/* 正しくタイプされた場合のテキスト */
+.typed {
+  color: lightgreen;
+}
+
+/* ミスタイプの場合の背景 */
+.mistyped {
+  background-color: red;
+}
