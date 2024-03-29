@@ -14,6 +14,7 @@ const start = document.getElementById('start');
 const count = document.getElementById('count');
 const scorefield = document.getElementById('score')
 const missfield = document.getElementById('miss')
+const textName = document.getElementById('textName')
 
 // 複数のテキストを格納する配列
 const textLists =[
@@ -104,6 +105,7 @@ const rankCheck = score => {
 };
 
 const atherText = (ansrank,score) => {
+  let text = '';
   switch(ansrank){
     case 'C':
       return `Bランクまであと${100 - score}文字です。`;
@@ -121,14 +123,16 @@ const atherText = (ansrank,score) => {
   return text
 };
 
-const ranktext = score => {
+const ranktext = (score) => {
+  let text = '';
+
   if(score < 10){
       text = 'C';
     } else if(score < 20){
       text = 'B';
     } else if(score < 30){
       text = 'A';
-    } else if(score >= 30){
+    } else if(score >= 40){
       text = 'S';
     }
     return text
@@ -137,7 +141,7 @@ const ranktext = score => {
 // ゲームを終了
 const gameOver = id => {
   clearInterval(id);
-  confirm(rankCheck(score));
+  confirm(rankCheck(score,totle));
   
 };
 
